@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header class="header">
+        <img style="display:inline;"
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/6/69/IIT_Madras_Logo.svg/1200px-IIT_Madras_Logo.svg.png"
+            width="100" hight="100" alt="Iit Madras logo">
+        <h1>HOSTEL COMPLAINT PORTAL</h1>
+        <p>IIT Madras</p>
+    </header>
+    <section>
+        <div class="container">
+            <form name="submit-to-google-sheet" class="form">
+                <label for="hostel">Choose your hostel:</label>
+                <select name="hostel" id="hostel">
+                    <option value="Cauvery">Cauvery</option>
+                    <option value="Mandakini">Mandakini</option>
+                    <option value="Brahmaputra">Brahmaputra</option>
+                    <option value="Sarayu">Sarayu</option>
+                </select><br>
+                <label for="complaint">Your Complaint Come Under Which Field:</label>
+                <select name="complaint" id="complaint">
+                    <option value="Hygiene">Hygiene</option>
+                    <option value="Water">Water</option>
+                    <option value="Electricity">Electricity</option>
+                    <option value="Other">Other</option>
+                </select><br>
+                <label for="name">Enter Your Name: </label>
+                <input type="text" id="name" name="name"><br>
+
+                <label for="roll">Enter Your Roll Number:</label>
+                <input type="text" id="roll" name="roll"><br>
+
+                <label for="room">Enter Your Room Number:</label>
+                <input type="number" id="room" name="room"><br>
+
+                <label for="Phone Number">Enter Your Phone Number</label>
+                <input type="" id="phone" name="phone"> <br>
+
+                <label for="desc">Describe your complaint:</label>
+                <textarea name="desc" id="desc"></textarea>
+
+
+
+                <button class="button" type="submit" onclick="submitted()">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function submitted() {
+            alert("Complaint submitted successfully");
+            
+        }
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw8dE4PhVaHggMEdR3wS7xJORxsfaI9BRyN2WqYIbynMhBkZcwcRBIw5Td1CNmIfENpNA/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+        })
+
+    </script>
+</body>
+
+</html>

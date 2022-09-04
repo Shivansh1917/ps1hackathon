@@ -1,0 +1,127 @@
+.header{
+	padding:20px;
+    text-align: center;
+	position:sticky;
+	left: 0;
+	width: 95%;
+    margin-left: 10px;
+	z-index: 10;
+	transition: all 0.1s ease-in-out;
+    color: white;
+	background: #3f4240;
+    border-radius:8px;
+}
+body{
+    
+    background-color: rgb(133, 198, 251);
+    color: rgb(24, 27, 28);
+}
+section{
+    min-height: 100vh;
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    font-family: sans-serif;
+    font-size: 18px;
+    width: 90%;
+    max-width: 600px;
+    align-items: center;
+    margin: 20px;
+    background-color: rgb(110, 105, 109);
+    border-radius: 8px;
+    padding: 3rem;
+    display: flex;
+    flex-direction:column;
+    
+}
+button{
+    margin-top: 2rem;
+    width: fit-content;
+    padding: 1rem;
+    font-size: 2rem;
+    background-color: rgb(25,28,29);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+align-self: flex-end    ;  
+}
+
+label{
+    color: white;
+    margin-right: 15px;
+    margin: 10px;
+    padding: 10px;
+    border: 3px;
+}
+#hostel{
+    color: rgb(13, 14, 15);
+    margin: 10px;
+    padding: 10px;
+    align-self: flex-end;
+    border: solid 1px black;
+}
+.button:hover {background-color: #15b115}
+
+.button:active {
+  background-color: #b6bfb7;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#complaint{
+    color: rgb(13, 14, 15);
+    margin: 10px;
+    padding: 10px;
+    align-self: flex-end;
+    border: solid 1px black;
+    border-radius: 5px;
+}
+#name{
+    margin-left: 100px;
+}
+#room{
+    margin-left: 40px;
+}
+#hostel{
+    margin-left: 150px;
+    border-radius: 5px;
+}
+#desc{
+    margin-left: 50px;
+    width: 500px;
+    height: 50px;
+    resize: none;
+}
+#phone{
+    margin-left: 40px;
+}
+#roll{
+    margin-left: 55px;
+}
+input{
+    color: rgb(13, 14, 15);
+    margin: 10px;
+    padding: 10px;
+    align-self: flex-end;
+    border-radius: 6px;
+    border: solid 1px black;
+    font-size: larger;
+}
+textarea {
+    color:rgb(13,14,15) ;
+    margin: 10px;
+    width: 100%;
+    height: 200px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid rgb(19, 18, 18);
+    border-radius: 6px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+  }
